@@ -1,16 +1,15 @@
 html{
-    background-color: rgb(15,29,78) !important;
+    /* background-color: rgb(15,29,78) !important; */
 
 }
 body{
     /* height: 500px;
     width: 800px; */
-    /* background-color: rgb(15,29,78) !important; */
+    background-color: rgb(15,29,78) !important;
     /* border: solid 1px red; */
-    display: flex;
-    position: relative;
-    height: inherit;
-    width: inherit;
+
+    
+
    
 }
 .circle {
@@ -26,21 +25,43 @@ body{
     width:20vw;
     z-index: -1;
 }
-.links{
+.nav-link{
     color: #fff;
-    font-size: 1.1rem;
-    font-family: Proxima Nova Semibold,sans-serif;
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    padding: .6rem 2.0rem;
+    padding: .8rem 2.5rem;
     position: relative;
     border-bottom: .2rem solid transparent;
+    /* text-shadow: 0 0 1rem rgba(255,110,196,.4);  IF PRESSED */
     border-bottom-width: 0.2rem;
     border-bottom-style: solid;
     border-bottom-color: transparent;
     text-decoration: none;
     padding-top:150px;
 } 
+.half-circle {
+    height:inherit;
+    width:inherit;
+    border-radius: 0 0 90px 90px;
+    background:transparent;
+    border-color: #ec008c;
+}
 .nav {
     background-color: rgb(15,29,78) !important;
+}
+
+.nav-item{
+    padding-right: 2rem;
+}
+.navbar-brand{
+    font-weight: bold;
+
+    color: #fff;
+    padding-left: 2rem;
+    font-size: 40px !important;
+    padding: .8rem 2.5rem;
+    padding-top:70px !important;
 }

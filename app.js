@@ -7,46 +7,38 @@
   let xDem = Array(5);
   let yDem = Array(5);
 
-    function getRandomInt(min,max) {
-      return Math.floor(Math.random() * (max - min) ) + min;
-      // return Math.floor(Math.random() * Math.floor(max));
-    }
+  function getRandomInt(min,max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+    // return Math.floor(Math.random() * Math.floor(max));
+  }
+  
+  for(let i = 0; i < circleArray.length; i++){
     
- 
-      for(let i = 0; i < circleArray.length; i++){
-        
-        let x = getRandomInt(0,width - widthMinus);
-        let y = getRandomInt(0,height - heightMinus);
-        let size = getRandomInt(9,20);
+    let x = getRandomInt(0,width - widthMinus);
+    let y = getRandomInt(0,height - heightMinus);
+    let size = getRandomInt(9,20);
 
-        xDem[i]=x;
-        yDem[i]=y;
-        let xDifference = xDem[i-1] - x;
-        let yDifference = yDem[i-1] - y;
-        // console.log(x);
-        if(xDifference < 50){
-          x=x+200;
-        }
-        if(yDifference < 50){
-          y=y+200;
-        }
-        // console.log(x);
+    xDem[i]=x;
+    yDem[i]=y;
 
-        circleArray[i].setAttribute("style", "border-color:" + "rgb("+getRandomInt(0,255)+", "+getRandomInt(0,255)+", "+getRandomInt(0,255)+")");
-        circleArray[i].style.left = x+'px';
-        circleArray[i].style.top = y+'px';
-        circleArray[i].style.height = size+'vw';
-        circleArray[i].style.width = size+'vw';
+    let xDifference = xDem[i-1] - x;
+    let yDifference = yDem[i-1] - y;
 
-      }
-    
-
-    function move(defaultPos,mousePos){
-      if(defaultPos!=0 && mousePos!=0 ){
-      return (mousePos/defaultPos);
-      }else{return 1;}
+    if(xDifference < 50){
+      x=x+200;
     }
-   
+
+    if(yDifference < 50){
+      y=y+200;
+    }
+
+    circleArray[i].setAttribute("style", "border-color:" + "rgb("+getRandomInt(0,255)+", "+getRandomInt(0,255)+", "+getRandomInt(0,255)+")");
+    circleArray[i].style.left = x+'px';
+    circleArray[i].style.top = y+'px';
+    circleArray[i].style.height = size+'vw';
+    circleArray[i].style.width = size+'vw';
+
+  }
 
     let el = document.getElementById('container');
     let cir = document.getElementsByClassName('circle');
