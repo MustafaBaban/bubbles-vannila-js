@@ -4,8 +4,8 @@
   let widthMinus = window.innerWidth * 0.30;
   let height = window.innerHeight;
   let heightMinus = window.innerHeight * 0.60;
-  let xDem = Array(5);
-  let yDem = Array(5);
+  let xDem = [];
+  let yDem = [];
   let xStore = [];
   let yStore = [];
 
@@ -61,7 +61,7 @@
         let ycord = e.clientY;
 
         for(let i = 0; i < circleArray.length; i++){
-          circleArray[i].style.transitionDuration = "0.01s";
+          circleArray[i].style.transitionDuration = "0.3s";
           circleArray[i].style.transitionTimingFunction = "linear";
           let factor = circleArray[i].attributes.factor.value;
           let newposX = xcord * factor;
